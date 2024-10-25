@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Markdown from 'react-markdown'
 import { Sun, Cloud, CloudRain, Wind, Droplets, Thermometer } from 'lucide-react'
 
 import WeatherIcon from './WeatherIcon.jsx'
@@ -117,7 +118,7 @@ export default function WeatherDashboard() {
  
        <div className="bg-white rounded-lg shadow-md p-6 mb-8 animate-fade-in">
          <h2 className="text-2xl font-bold mb-4 text-gray-800">Weather Summary</h2>
-         <p className="text-gray-700 leading-relaxed">{summary.data.response}</p>
+         <p className="text-gray-700 leading-relaxed"><Markdown>{summary.data.response}</Markdown></p>
        </div>
  
        <div className="bg-white rounded-lg shadow-md p-6 animate-fade-in">

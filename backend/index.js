@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import getCurrentInfo from './modules/getCurrentInfo.js';
 import getFiveDayInfo from './modules/getFiveDayInfo.js';
 import summarizeWeather from './modules/summarizeWeather.js';
@@ -14,6 +15,7 @@ const PORT = 3000;
 dotenv.config();
 
 app.use(express.json());
+app.use(cors());
 
 // Root Directory
 app.get("/", (req, res) => {
