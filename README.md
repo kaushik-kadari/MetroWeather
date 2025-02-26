@@ -30,7 +30,7 @@ MetroWeather is a simple and elegant weather application that provides users wit
 ![Daily Summary](frontend/images/Summary.jpg) 
 
 ### 📅 5-Day Forecast
-![5-Day Forecast](frontend/images/5DayReport.jpg) 
+![5-Day Forecast](frontend/images/5dayReport.jpg) 
 
 ---
 
