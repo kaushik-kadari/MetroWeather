@@ -133,7 +133,9 @@ export default function WeatherDashboard() {
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 animate-fade-in">
              {forecast.data.list.map((day, index) => (
                <div key={index} className="bg-gray-50 p-4 rounded-md shadow">
-                 <h3 className="font-semibold mb-2">{new Date(day.dt * 1000).toLocaleString()}</h3>
+                 <h3 className="font-semibold mb-2">
+                   {new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(day.dt * 1000))}
+                 </h3>
                  <div className="flex items-center space-x-2">
                    <WeatherIcon main={day.weather[0].main} />
                    <span>{day.weather[0].description}</span>
