@@ -33,7 +33,7 @@ You can try out MetroWeather in this live demo: https://metro-weather.netlify.ap
 ![Daily Summary](frontend/images/Summary.jpg) 
 
 ### 📅 5-Day Forecast
-![5-Day Forecast](frontend/images/5DayReport.jpg) 
+![5-Day Forecast](frontend/images/5dayReport.jpg) 
 
 ---
 
