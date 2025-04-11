@@ -20,7 +20,8 @@ export default function Navbar() {
           <div className="flex space-x-7">
             <div>
               <a href="/" className="flex items-center py-4 px-2">
-                <Cloud className="h-8 w-8 mr-2" />
+                {/* <Cloud className="h-8 w-8 mr-2" /> */}
+                <img src="/cloudy.png" alt="Cloud" className="h-8 w-8 mr-2" />
                 <span className="font-semibold text-lg">Metro Weather</span>
               </a>
             </div>

@@ -3,6 +3,9 @@
 MetroWeather is a simple and elegant weather application that provides users with current weather conditions, a detailed day summary, and a 5-day forecast. Users can search for and select their preferred location to get updated weather information using the OpenWeather API.
 
 ---
+## 🔗 Live Preview
+
+You can try out MetroWeather in this live demo: https://metro-weather.netlify.app/
 
 ## ✨ Features
 - **Current Weather** 🌡️: Real-time weather data, including temperature, humidity, and wind speed.

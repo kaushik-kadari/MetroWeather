@@ -1,9 +1,6 @@
 import Groq from 'groq-sdk';
 
-// const groq = new Groq({apiKey: process.env.GROQ_API_KEY});
-const groq = new Groq({apiKey: "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"});
-
-async function summarizeWeather(weather_resp) {
+async function summarizeWeather(weather_resp, GROQ_API_KEY) {
     const climate = weather_resp.weather[0].main; // Climate (Sunny, Rain, Cloudy, etc.)
     const climate_description = weather_resp.weather[0].description; // Description
     const climate_kelvin = weather_resp.main.temp; // Temperature in Kelvin
@@ -19,7 +16,8 @@ async function summarizeWeather(weather_resp) {
     const climate_city = weather_resp.name; // City name
     const climate_timezone = weather_resp.timezone; // Timezone offset in seconds
     const climate_country = weather_resp.sys.country; // Country code
-
+    const groq = new Groq({apiKey: GROQ_API_KEY});
+    
     const weatherSummaryPrompt = `
         Look at this weather report for ${climate_city}, ${climate_country}:
         

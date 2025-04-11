@@ -38,7 +38,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-100 to-blue-200">
+    <div className="h-[100vh] bg-gradient-to-b from-blue-100 to-blue-200">
       <main className="container mx-auto px-4 py-12">
         <section className={`text-center transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h2 className="text-5xl font-bold text-gray-800 mb-6">Your Metro Weather Assistant</h2>
@@ -97,19 +97,11 @@ export default function HomePage() {
             />
           </div>
         </section>
-
-        {/* <section className="mt-20 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Ready to stay ahead of metro weather?</h2>
-          <Link to="/dashboard" className="bg-blue-500 text-white px-8 py-3 rounded-full text-lg hover:bg-blue-600 transition-colors duration-300 inline-flex items-center">
-            Go to Dashboard
-            <ChevronDown className="ml-2 w-5 h-5 animate-bounce" />
-          </Link>
-        </section> */}
       </main>
 
-      <footer className="bg-gray-800 text-white py-8 mt-20">
+      <footer className="bg-gray-800 text-white py-4 fixed bottom-0 left-0 right-0">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 Metro Weather. All rights reserved.</p>
+          <p>&copy; 2025 Metro Weather. All rights reserved.</p>
         </div>
       </footer>
     </div>

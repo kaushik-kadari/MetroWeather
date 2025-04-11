@@ -51,6 +51,7 @@ app.post("/summarizeWeather", async (req, res) => {
         const lat = req.body.lat;
         const lon = req.body.lon;
         const API_KEY = process.env.API_KEY;
+        const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
         const today = new Date();
         today.setHours(0, 0, 0, 0);
@@ -67,7 +68,7 @@ app.post("/summarizeWeather", async (req, res) => {
 
         const weather_resp = await getCurrentInfo(lat, lon, API_KEY);
 
-        const chatCompletion = await summarizeWeather(weather_resp);
+        const chatCompletion = await summarizeWeather(weather_resp, GROQ_API_KEY);
         const summary = chatCompletion.choices[0]?.message?.content || "";
 
         const weatherData = new Weather({
