@@ -53,19 +53,19 @@ export default function WeatherDashboard() {
   const { lat, lon } = location;
 
   const getWeatherData = async () => {
-    const res = await axios.post('https://metro-backend.render.app/getCurrentInfo', { lat, lon });
+    const res = await axios.post('https://metro-backend-yg2e.onrender.com/getCurrentInfo', { lat, lon });
     // console.log(res);
     return res;
   };
 
   const getWeatherForecast = async () => {
-    const res = await axios.post('https://metro-backend.render.app/getFiveDayInfo', { lat, lon });
+    const res = await axios.post('https://metro-backend-yg2e.onrender.com/getFiveDayInfo', { lat, lon });
     // console.log(res);
     return res;
   };
 
   const getWeatherSummary = async () => {
-    const res = await axios.post('https://metro-backend.render.app/summarizeWeather', { lat, lon});
+    const res = await axios.post('https://metro-backend-yg2e.onrender.com/summarizeWeather', { lat, lon});
     // console.log(res);
     return res;
   };
