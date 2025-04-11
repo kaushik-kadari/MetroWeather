@@ -38,7 +38,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="h-[100vh] bg-gradient-to-b from-blue-100 to-blue-200">
+    <div className="bg-gradient-to-b from-blue-100 to-blue-200">
       <main className="container mx-auto px-4 py-12">
         <section className={`text-center transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h2 className="text-5xl font-bold text-gray-800 mb-6">Your Metro Weather Assistant</h2>
