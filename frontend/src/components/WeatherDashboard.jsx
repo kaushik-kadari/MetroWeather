@@ -18,15 +18,15 @@ export default function WeatherDashboard() {
   const [city, setCity] = useState(useParams().city);
 
   const fetchLocation = async (place) => {
-      try {
-      const API_KEY = import.meta.env.VITE_API_KEY;
-      const response = await axios.get(
-        `https://api.opencagedata.com/geocode/v1/json?q=${city}&key=${API_KEY}`
-      );
-      const { lat, lng } = response.data.results[0].geometry;
-      setLocation({ lat, lon: lng });
-    } catch (error) {
-      setErrorMessage('Unable to fetch location.');
+    try {
+    const API_KEY = import.meta.env.VITE_API_KEY;
+    const response = await axios.get(
+      `https://api.opencagedata.com/geocode/v1/json?q=${city}&key=${API_KEY}`
+    );
+    const { lat, lng } = response.data.results[0].geometry;
+    setLocation({ lat, lon: lng });
+  } catch (error) {
+    setErrorMessage('Unable to fetch location.');
     }
   };
 
